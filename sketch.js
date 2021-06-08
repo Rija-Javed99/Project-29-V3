@@ -7,7 +7,7 @@ var engine, world;
 var holder,ball,ground;
 var stand1,stand2;
 var ball;
-var slingShot;
+
 var polygon_img;
 function preload(){
   polygon_img=loadImage("polygon.png");
@@ -61,7 +61,7 @@ function setup() {
   ball = Bodies.circle(50,200,20);
   World.add(world,ball);
 
-  slingShot = new Slingshot(this.ball,{x:100,y:200});
+
 
 }
 function draw() {
@@ -111,10 +111,10 @@ function draw() {
   fill("pink")
   blocks9.display();
   fill("gold");
-  imageMode(CENTER)
-  image(polygon_img ,ball.position.x,ball.position.y,40,40);
 
-  slingShot.display();
+  
+  
+  
 }
 function mouseDragged(){
   Matter.Body.setPosition(this.ball,{x:mouseX,y:mouseY});
