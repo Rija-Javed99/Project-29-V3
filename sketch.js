@@ -11,8 +11,9 @@ var ball;
 
 var polygon_img;
 function preload(){
-  polygon_img=loadImage("polygon.png");
+  //load polygon
 }
+
 function setup() {
   createCanvas(900,400);
   engine = Engine.create();
@@ -59,8 +60,8 @@ function setup() {
   blocks9 = new Block(700,95,30,40);
 
   //ball holder with slings
-  ball = Bodies.circle(50,200,20);
-  World.add(world,ball);
+
+  
 
 //create slingshot
 
@@ -68,10 +69,7 @@ function setup() {
 function draw() {
   background(56,44,44); 
 
-  textSize(20);
-  fill("lightyellow");
-  text("Drag the Hexagonal Stone and Release it, to launch it towards the blocks",100,30);
-
+ 
   ground.display();
   stand1.display();
   stand2.display();
@@ -114,9 +112,4 @@ function draw() {
   //display slingshot and set polygon image
   
 }
-function mouseDragged(){
-  Matter.Body.setPosition(this.ball,{x:mouseX,y:mouseY});
-}
-function mouseReleased(){
-  slingShot.fly();
-}
+//set mouse trigger functions
